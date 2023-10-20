@@ -3,7 +3,6 @@ A template for STM32 development with vscode
 
 ## resources
  - [Matej Blagšič's youtube channel](https://www.youtube.com/watch?v=FkqQpBqkSns)
-some resources here
 
 ## pre-requirements
   - [CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html)
@@ -12,4 +11,9 @@ some resources here
   - [Cmake](https://cmake.org/)
 
 
+## Setting up the environnement
+  some info here
 
+
+## Creating a new STM32 project
+  some info here
