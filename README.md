@@ -5,4 +5,5 @@ A template for STM32 development with vscode
 some resources here
 
 ## pre-requirements
-CubeMX (https://www.st.com/en/development-tools/stm32cubemx.html)
+  - [CubeMX]([https://link-url-here.org](https://www.st.com/en/development-tools/stm32cubemx.html))
+
