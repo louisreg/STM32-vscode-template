@@ -4,15 +4,18 @@
     "projectName": "test-f407vg",
     "configurations": [
         {
-            "name": "JLink debug",
+            "name": "JLink launch",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/sample-f407vg.elf",
+            "executable": "${workspaceRoot}/build/firmware.elf",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "jlink",
-            "device": "STM32F407VG",
+            "device": "STM32F407VG",              
             "interface": "swd",
-            "runToEntryPoint": "main",
+            "runToEntryPoint": "main",          // debug entry point
+            "preLaunchTask": "Build all",       // configured in tasks.json
+            // "preLaunchCommands": ["Build all"], // you can execute command instead of task
+            "svdFile": "",                      // Include svd to watch device peripherals
             "swoConfig":
             {
                 "enabled": true,
@@ -34,12 +37,15 @@
         {
             "name": "JLink attach",
             "cwd": "${workspaceRoot}",
-            "executable": "${workspaceRoot}/build/sample-f407vg.elf",
+            "executable": "${workspaceRoot}/build/firmware.elf",
             "request": "attach",
             "type": "cortex-debug",
             "servertype": "jlink",
             "device": "STM32F407VG",
             "interface": "swd",
+            "runToEntryPoint": "main", 
+            "preLaunchTask": "Build all", 
+            "svdFile": "", 
             "swoConfig":
             {
                 "enabled": true,
@@ -57,6 +63,34 @@
                     }
                 ]
             }
-        }
+        },
+        {
+            "name": "STlink launch",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/firmware.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "stutil",
+            "device": "STM32F407VG",
+            "interface": "swd",
+            "runToEntryPoint": "main", 
+            "preLaunchTask": "Build all", 
+            "svdFile": "", // Include svd to watch device peripherals
+            "swoConfig": {} // currently (v1.7.0) not supported
+        },
+        {
+            "name": "STlink attach",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceRoot}/build/firmware.elf",
+            "request": "attach",
+            "type": "cortex-debug",
+            "servertype": "stutil",
+            "device": "STM32F407VG",
+            "interface": "swd",
+            "runToEntryPoint": "main", 
+            "preLaunchTask": "Build all", 
+            "svdFile": "", // Include svd to watch device peripherals
+            "swoConfig": {} // currently (v1.7.0) not supported
+        },
     ]
 }

@@ -17,8 +17,10 @@ A template for STM32 development with vscode
 
 
 ## Setting up the environment
-  some info here 
-  settings.json gcc / jlink/ stlink path 
+  1. Setting up debug config
+      -  Set absolute paths in .vscode/settings.json. Paths can be found using "which xxx" in terminal. 
+      -  
+
 
 
 ## Creating a new STM32 project
@@ -37,3 +39,11 @@ A template for STM32 development with vscode
 
 ## Useful C/C++ libs
   - [Boost::ext](https://boost-ext.github.io/sml/index.html): a lite State Machine Language Library
+
+
+## TODO
+  - Get device header files
+  - Get device svd file (for debug)
+  - script for automatic project mcu update
+  - update CMAKE
+  - update c_cpp_properties

@@ -1,6 +1,5 @@
 {
-    // Change path to your system, use `which` to find the location of the executables
-    // Somehow, cortex-debug wants absolute path, even if the package is present in $PATH
-    "cortex-debug.armToolchainPath": "/usr/local/bin/arm-none-eabi-gcc",
-    "cortex-debug.JLinkGDBServerPath": "/usr/bin/jlink",
+    "cortex-debug.gdbPath": "/usr/local/bin/arm-none-eabi-gdb",
+    "cortex-debug.JLinkGDBServerPath": "/usr/local/bin/JLinkGDBServer",
+    "cortex-debug.stutilPath": "/usr/local/bin/st-util",
 }
